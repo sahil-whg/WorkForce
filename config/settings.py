@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", 'django-insecure-euxy1vqg!o)ja__r*=#b2_-ua0
 # DEBUG = True
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://workforce-ptih.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'workforce-ptih.onrender.com']
 
 
 # Application definition
@@ -143,3 +143,7 @@ CORS_ALLOWED_ORIGINS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+CSRF_TRUSTED_ORIGINS = [
+    "https://workforce-ptih.onrender.com",
+]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
