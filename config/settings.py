@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", 'django-insecure-euxy1vqg!o)ja__r*=#b2_-ua0
 # DEBUG = True
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://workforce-ptih.onrender.com']
 
 
 # Application definition
