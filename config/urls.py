@@ -23,19 +23,19 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('staffing.urls')),
       path(
-        'api/services/',
+        'services/',
         include('services.urls')
     ),    
     path(
-        'api/jobs/',
+        'jobs/',
         include('jobs.urls')
     ),
     path(
-        'api/candidates/',
+        '/candidates/',
         include('candidates.urls')
     ),
     path(
-        'api/client-inquiries/',
+        '/client-inquiries/',
         include('inquiries.urls')
     ),
 ]
