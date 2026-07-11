@@ -1,0 +1,41 @@
+.hero {
+    background: #f8fafc;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.about-company,
+.services,
+.industries,
+.cta {
+    padding: 90px 0;
+}
+
+.about-card,
+.service-card,
+.industry-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 30px;
+    height: 100%;
+}
+
+.stats {
+    background: #0f172a;
+    color: white;
+    padding: 80px 0;
+}
+
+.stats h2 {
+    color: white;
+    font-size: 42px;
+}
+
+.stats p {
+    color: #cbd5e1;
+}

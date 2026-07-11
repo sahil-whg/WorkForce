@@ -1,0 +1,32 @@
+<section class="process">
+
+    <div class="container">
+  
+      <div class="text-center mb-5">
+        <h2>Our Recruitment Process</h2>
+      </div>
+  
+      <div class="row">
+  
+        <div
+          class="col-lg-3 col-md-6 mb-4"
+          *ngFor="let step of steps; let i = index"
+        >
+  
+          <div class="step-card">
+  
+            <div class="number">
+              {{ i + 1 }}
+            </div>
+  
+            <h5>{{ step }}</h5>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>

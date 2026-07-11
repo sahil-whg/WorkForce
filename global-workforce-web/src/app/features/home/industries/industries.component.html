@@ -1,0 +1,30 @@
+<section class="industries">
+
+    <div class="container">
+  
+      <div class="text-center mb-5">
+        <h2>Industries We Serve</h2>
+  
+        <p>
+          Supporting global organizations with scalable staffing solutions.
+        </p>
+      </div>
+  
+      <div class="row">
+  
+        <div
+          class="col-lg-4 col-md-6 mb-4"
+          *ngFor="let industry of industries"
+        >
+  
+          <div class="industry-card">
+            <h5>{{ industry }}</h5>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>

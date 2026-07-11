@@ -1,0 +1,17 @@
+.jobs {
+    padding: 100px 0;
+  }
+  
+  .job-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 35px;
+  }
+  
+  .meta {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }

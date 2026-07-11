@@ -1,0 +1,93 @@
+<section class="container py-5">
+
+    <h2 class="mb-5">
+      Candidate Application
+    </h2>
+  
+    <form
+      [formGroup]="form"
+      (ngSubmit)="submit()"
+    >
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Full Name"
+          formControlName="full_name"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Email"
+          formControlName="email"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Phone"
+          formControlName="phone"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Languages Known"
+          formControlName="languages_known"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Experience"
+          formControlName="years_of_experience"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Preferred Location"
+          formControlName="preferred_location"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Current Salary"
+          formControlName="current_salary"
+        >
+      </div>
+  
+      <div class="mb-3">
+        <input
+          class="form-control"
+          placeholder="Expected Salary"
+          formControlName="expected_salary"
+        >
+      </div>
+  
+      <div class="mb-4">
+        <input
+          type="file"
+          class="form-control"
+          (change)="onFileChange($event)"
+        >
+      </div>
+  
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Submit Application
+      </button>
+  
+    </form>
+  
+  </section>

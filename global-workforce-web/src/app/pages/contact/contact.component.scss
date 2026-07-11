@@ -1,0 +1,38 @@
+.contact-page {
+    padding: 100px 0;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.contact-item h5 {
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-item p,
+.contact-item a {
+    color: #64748b;
+    margin: 0;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #0d6efd;
+}
+
+.map-placeholder {
+    background: white;
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 80px;
+    text-align: center;
+    color: #64748b;
+}

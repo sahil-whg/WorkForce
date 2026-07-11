@@ -1,0 +1,34 @@
+<section class="testimonials">
+
+    <div class="container">
+  
+      <div class="text-center mb-5">
+        <h2>What Our Clients Say</h2>
+      </div>
+  
+      <div class="row">
+  
+        <div
+          class="col-lg-6 mb-4"
+          *ngFor="let testimonial of testimonials"
+        >
+  
+          <div class="testimonial-card">
+  
+            <p class="quote">
+              "{{ testimonial.quote }}"
+            </p>
+  
+            <h6>
+              {{ testimonial.company }}
+            </h6>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>

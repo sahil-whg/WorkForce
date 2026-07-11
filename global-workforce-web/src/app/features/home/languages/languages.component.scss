@@ -1,0 +1,18 @@
+.languages {
+    padding: 100px 0;
+  }
+  
+  .language-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .language-pill {
+    padding: 14px 28px;
+    background: #f1f5f9;
+    border-radius: 50px;
+    color: #0f172a;
+    font-weight: 500;
+  }

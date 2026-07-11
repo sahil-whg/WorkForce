@@ -1,0 +1,19 @@
+.industries {
+    padding: 100px 0;
+    background: #f8fafc;
+  }
+  
+  .industry-card {
+    background: white;
+    border-radius: 16px;
+    padding: 35px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    height: 100%;
+    transition: all .3s;
+  }
+  
+  .industry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  }

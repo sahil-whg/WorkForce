@@ -1,0 +1,49 @@
+<section class="jobs">
+
+    <div class="container">
+  
+      <h2 class="mb-5">
+        Open Opportunities
+      </h2>
+  
+      <div
+        class="job-card mb-4"
+        *ngFor="let job of jobs"
+      >
+  
+        <h4>
+          {{ job.title }}
+        </h4>
+  
+        <p>
+          {{ job.company }}
+        </p>
+  
+        <div class="meta">
+  
+          <span>
+            📍 {{ job.location }}
+          </span>
+  
+          <span>
+            💼 {{ job.employment_type }}
+          </span>
+  
+          <span>
+            🏆 {{ job.experience }}
+          </span>
+  
+        </div>
+  
+        <button
+          class="btn btn-primary mt-4"
+          routerLink="/apply"
+        >
+          Apply Now
+        </button>
+  
+      </div>
+  
+    </div>
+  
+  </section>

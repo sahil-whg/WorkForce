@@ -1,0 +1,185 @@
+<section class="hero">
+
+    <div class="container text-center">
+
+        <h1>About Global Workforce Solutions</h1>
+
+        <p>
+            Your trusted recruitment partner delivering multilingual
+            staffing and enterprise workforce solutions across global markets.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="about-company">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h2>Who We Are</h2>
+
+                <p>
+                    Global Workforce Solutions is a staffing and recruitment
+                    company focused on connecting businesses with highly skilled
+                    multilingual professionals, IT specialists, customer support
+                    experts, and remote talent.
+                </p>
+
+                <p>
+                    Our recruitment process is built around quality,
+                    speed, and long-term partnerships, enabling organizations
+                    to scale confidently in competitive global markets.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="about-card">
+
+                    <h3>Our Mission</h3>
+
+                    <p>
+                        To simplify global hiring by providing businesses with
+                        reliable multilingual and specialized workforce solutions
+                        that drive operational success.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2>Our Expertise</h2>
+
+        </div>
+
+        <div class="row">
+
+            <div
+                class="col-md-6 col-lg-4 mb-4"
+                *ngFor="let service of services">
+
+                <div class="service-card">
+
+                    <h5>{{ service }}</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-3">
+
+                <h2>100+</h2>
+                <p>Clients Served</p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h2>500+</h2>
+                <p>Professionals Placed</p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h2>20+</h2>
+                <p>Languages Supported</p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h2>Global</h2>
+                <p>Hiring Network</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="industries">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2>Industries We Support</h2>
+
+        </div>
+
+        <div class="row">
+
+            <div
+                class="col-md-4 mb-4"
+                *ngFor="let industry of industries">
+
+                <div class="industry-card">
+
+                    {{ industry }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <div class="container text-center">
+
+        <h2>Let's Build Your Global Workforce</h2>
+
+        <p>
+            Whether you need multilingual professionals,
+            contract staffing, or enterprise recruitment,
+            we're here to help.
+        </p>
+
+        <a
+            routerLink="/request-talent"
+            class="btn btn-primary btn-lg">
+
+            Request Talent
+
+        </a>
+
+    </div>
+
+</section>

@@ -1,0 +1,227 @@
+.custom-navbar{
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:#ffffff;
+  padding:8px 0;
+  height:59px;
+  // min-height: 50px;
+  box-shadow:0 1px 8px rgba(15,23,42,.06);;
+
+  border-bottom:1px solid #eef2f7;
+
+}
+
+.navbar-brand{
+
+  display:flex;
+
+  align-items:center;
+
+  text-decoration:none;
+  font-size:1.8rem;
+
+}
+
+.brand-logo{
+
+  width:42px;
+
+  height:42px;
+
+  border-radius:12px;
+
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:white;
+
+  font-weight:700;
+
+  font-size:19px;
+
+  box-shadow:0 12px 24px rgba(37,99,235,.3);
+
+}
+
+.brand-text{
+
+  margin-left:14px;
+
+}
+
+.title{
+
+  font-size:11px;
+
+  font-weight:700;
+
+  color:#0F172A;
+
+  line-height:1;
+  padding:10px 0;
+}
+
+.subtitle{
+
+  font-size:12px;
+
+  color:#64748B;
+
+}
+
+.navbar-nav{
+
+  gap:24px;
+
+}
+
+.nav-link{
+
+  color:#334155;
+
+  font-weight:600;
+
+  position:relative;
+
+  transition:.3s;
+  font-size:15px;
+}
+
+.nav-link:hover{
+
+  color:#2563EB;
+
+}
+
+.nav-link::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:-4px;
+
+  width:0;
+
+  height:2px;
+
+  background:#2563EB;
+
+  transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+  width:100%;
+
+}
+
+.actions{
+
+  display:flex;
+
+  gap:14px;
+
+}
+
+.btn{
+
+  padding:5px 28px;
+
+  border-radius:10px;
+
+  font-weight:600;
+
+  transition:.3s;
+  font-size:14px;
+}
+
+.btn-primary{
+
+  background:#2563EB;
+
+  border:none;
+
+  box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+.btn-primary:hover{
+
+  transform:translateY(-2px);
+
+}
+
+.btn-outline-primary{
+
+  border:2px solid #2563EB;
+
+  color:#2563EB;
+
+}
+
+.btn-outline-primary:hover{
+
+  background:#2563EB;
+
+  color:white;
+
+}
+
+@media(max-width:991px){
+
+// .custom-navbar{
+
+// height:auto;
+
+// padding:16px 0;
+
+// }
+
+.navbar-nav{
+
+margin:25px 0;
+
+gap:12px;
+
+}
+
+.actions{
+
+flex-direction:column;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+}
+.navbar .container{
+
+  max-width:1120px;
+
+}
+.logo{
+  width:54px;
+  height:54px;
+}
+
+.navbar .btn{
+
+  padding:5px 28px;
+
+}
