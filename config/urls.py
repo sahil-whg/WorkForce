@@ -31,11 +31,11 @@ urlpatterns = [
         include('jobs.urls')
     ),
     path(
-        '/candidates/',
+        'candidates/',
         include('candidates.urls')
     ),
     path(
-        '/client-inquiries/',
+        'client-inquiries/',
         include('inquiries.urls')
     ),
 ]
