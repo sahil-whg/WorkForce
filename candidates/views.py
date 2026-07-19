@@ -17,4 +17,25 @@ class CandidateApplicationAPIView(
     serializer_class = (
         CandidateApplicationSerializer
     )
-    
+
+from django.http import FileResponse, Http404
+from django.contrib.admin.views.decorators import staff_member_required
+
+from .models import CandidateApplication
+
+
+@staff_member_required
+def download_resume(request, pk):
+    try:
+        application = CandidateApplication.objects.get(pk=pk)
+    except CandidateApplication.DoesNotExist:
+        raise Http404("Application not found")
+
+    if not application.resume:
+        raise Http404("Resume not found")
+
+    return FileResponse(
+        application.resume.open("rb"),
+        as_attachment=True,
+        filename=application.resume.name.split("/")[-1],
+    )
