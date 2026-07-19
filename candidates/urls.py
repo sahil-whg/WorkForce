@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
 from .views import (
     CandidateApplicationAPIView
 )
@@ -6,6 +7,6 @@ from .views import (
 urlpatterns = [
     path(
         'apply/',
-        CandidateApplicationAPIView.as_view()
+        csrf_exempt(CandidateApplicationAPIView.as_view())
     )
 ]
