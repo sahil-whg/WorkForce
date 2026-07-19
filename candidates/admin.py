@@ -13,7 +13,7 @@ class CandidateApplicationAdmin(admin.ModelAdmin):
         if obj and obj.resume:
             return format_html(
                 '<a href="{}">⬇ Download Resume</a>',
-                reverse("candidates:download_resume", args=[obj.pk]),
+                reverse("download_resume", args=[obj.pk]),
             )
         return "-"
 
