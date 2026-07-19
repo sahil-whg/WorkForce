@@ -7,24 +7,14 @@ from .models import CandidateApplication
 
 @admin.register(CandidateApplication)
 class CandidateApplicationAdmin(admin.ModelAdmin):
-
     readonly_fields = ("resume_download",)
 
-    fields = (
-        "first_name",
-        "last_name",
-        "email",
-        "phone",
-        "resume_download",
-    )
-
     def resume_download(self, obj):
-        if not obj.resume:
-            return "-"
-
-        return format_html(
-            '<a href="{}">⬇ Download Resume</a>',
-            reverse("download_resume", args=[obj.pk]),
-        )
+        if obj and obj.resume:
+            return format_html(
+                '<a href="{}">⬇ Download Resume</a>',
+                reverse("candidates:download_resume", args=[obj.pk]),
+            )
+        return "-"
 
     resume_download.short_description = "Resume"
