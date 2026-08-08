@@ -1,17 +1,52 @@
-.jobs {
-    padding: 100px 0;
-  }
-  
-  .job-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    padding: 35px;
-  }
-  
-  .meta {
+.job-card {
+    padding: 15px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    transition: .2s;
+}
+
+.job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.job-header {
     display: flex;
-    gap: 30px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.job-header h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.company {
+    font-size: .85rem;
+    color: #6c757d;
+    margin-top: 2px;
+}
+
+.job-meta {
+    display: flex;
+    gap: 14px;
+    margin: 10px 0;
+    font-size: .8rem;
+    color: #6c757d;
+}
+
+.job-description {
+    font-size: .9rem;
+    line-height: 1.45;
+    color: #555;
+    margin: 0;
+}
+
+.apply-btn {
+    padding: 6px 14px;
+    font-size: .85rem;
+    border-radius: 6px;
+}

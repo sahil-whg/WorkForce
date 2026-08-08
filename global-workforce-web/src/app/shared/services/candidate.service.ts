@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class CandidateService {
 
   private api =
-    'https://www.linguahire.com/api/candidates/apply/';
+    'http://localhost:8000/candidates/apply/';
 
   constructor(
     private http: HttpClient

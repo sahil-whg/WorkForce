@@ -1,49 +1,41 @@
-<section class="jobs">
-
+<section class="jobs py-5">
     <div class="container">
-  
-      <h2 class="mb-5">
-        Open Opportunities
-      </h2>
-  
-      <div
-        class="job-card mb-4"
-        *ngFor="let job of jobs"
-      >
-  
-        <h4>
-          {{ job.title }}
-        </h4>
-  
-        <p>
-          {{ job.company }}
-        </p>
-  
-        <div class="meta">
-  
-          <span>
-            📍 {{ job.location }}
-          </span>
-  
-          <span>
-            💼 {{ job.employment_type }}
-          </span>
-  
-          <span>
-            🏆 {{ job.experience }}
-          </span>
-  
+
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Open Opportunities</h2>
+            <p class="text-muted">
+                Explore our latest openings.
+            </p>
         </div>
-  
-        <button
-          class="btn btn-primary mt-4"
-          routerLink="/apply"
-        >
-          Apply Now
-        </button>
-  
-      </div>
-  
+
+        <div class="job-card" *ngFor="let job of jobs">
+
+            <div class="job-header">
+
+                <div>
+                    <h5>{{ job.title }}</h5>
+                    <div class="company">{{ job.company }}</div>
+                </div>
+
+                <button
+                    class="btn btn-primary apply-btn"
+                    routerLink="/apply">
+                    Apply
+                </button>
+
+            </div>
+
+            <div class="job-meta">
+                <span>📍 {{ job.location }}</span>
+                <span>💼 {{ job.employment_type }}</span>
+                <span>🏆 {{ job.experience }}</span>
+            </div>
+
+            <p class="job-description">
+                {{ job.description }}
+            </p>
+
+        </div>
+
     </div>
-  
-  </section>
+</section>

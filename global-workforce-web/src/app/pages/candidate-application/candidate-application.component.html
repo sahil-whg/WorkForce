@@ -1,93 +1,216 @@
-<section class="container py-5">
+<section class="application-section py-5">
 
-    <h2 class="mb-5">
-      Candidate Application
-    </h2>
-  
-    <form
-      [formGroup]="form"
-      (ngSubmit)="submit()"
-    >
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Full Name"
-          formControlName="full_name"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Email"
-          formControlName="email"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Phone"
-          formControlName="phone"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Languages Known"
-          formControlName="languages_known"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Experience"
-          formControlName="years_of_experience"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Preferred Location"
-          formControlName="preferred_location"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Current Salary"
-          formControlName="current_salary"
-        >
-      </div>
-  
-      <div class="mb-3">
-        <input
-          class="form-control"
-          placeholder="Expected Salary"
-          formControlName="expected_salary"
-        >
-      </div>
-  
-      <div class="mb-4">
-        <input
-          type="file"
-          class="form-control"
-          (change)="onFileChange($event)"
-        >
-      </div>
-  
-      <button
-        class="btn btn-primary"
-        type="submit"
-      >
-        Submit Application
-      </button>
-  
-    </form>
-  
-  </section>
+    <div class="container">
+
+        <div class="application-card">
+
+            <div class="text-center mb-4">
+                <h2>Candidate Application</h2>
+                <p class="text-muted">
+                    Complete the form below and upload your resume. Our recruitment team will review your application and contact you if your profile matches our requirements.
+                </p>
+            </div>
+
+            <form
+                [formGroup]="form"
+                (ngSubmit)="submit()"
+                novalidate>
+
+                <div class="row">
+
+                    <!-- Full Name -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Full Name <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="John Smith"
+                            formControlName="full_name">
+
+                        <small
+                            class="text-danger"
+                            *ngIf="f.full_name.touched && f.full_name.invalid">
+
+                            Full name is required.
+
+                        </small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Email Address <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            placeholder="john@example.com"
+                            formControlName="email">
+
+                        <small
+                            class="text-danger"
+                            *ngIf="f.email.touched && f.email.hasError('required')">
+
+                            Email is required.
+
+                        </small>
+
+                        <small
+                            class="text-danger"
+                            *ngIf="f.email.touched && f.email.hasError('email')">
+
+                            Please enter a valid email address.
+
+                        </small>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Phone Number <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            maxlength="10"
+                            placeholder="9876543210"
+                            formControlName="phone">
+
+                        <small
+                            class="text-danger"
+                            *ngIf="f.phone.touched && f.phone.invalid">
+
+                            Enter a valid 10-digit mobile number.
+
+                        </small>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Languages Known
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="English, Hindi, Spanish"
+                            formControlName="languages_known">
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Years of Experience
+                        </label>
+
+                        <input
+                            type="number"
+                            min="0"
+                            class="form-control"
+                            placeholder="5"
+                            formControlName="years_of_experience">
+                    </div>
+
+                    <!-- Location -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Preferred Location
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Gurgaon"
+                            formControlName="preferred_location">
+                    </div>
+
+                    <!-- Current Salary -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Current Salary (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="800000"
+                            formControlName="current_salary">
+                    </div>
+
+                    <!-- Expected Salary -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Expected Salary (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="1000000"
+                            formControlName="expected_salary">
+                    </div>
+
+                    <!-- Resume -->
+                    <div class="col-12 mb-4">
+
+                        <label class="form-label">
+                            Upload Resume
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="file"
+                            class="form-control"
+                            accept=".pdf,.doc,.docx"
+                            (change)="onFileChange($event)">
+
+                        <div class="form-text">
+                            Accepted formats: PDF, DOC, DOCX (Maximum 5 MB)
+                        </div>
+
+                        <small
+                            class="text-danger"
+                            *ngIf="resumeError">
+
+                            Please upload your resume.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-end">
+
+                    <button
+                        class="btn btn-primary px-4"
+                        type="submit"
+                        [disabled]="isSubmitting">
+
+                        <span
+                            *ngIf="isSubmitting"
+                            class="spinner-border spinner-border-sm me-2"
+                            aria-hidden="true">
+                        </span>
+
+                        {{ isSubmitting ? 'Submitting...' : 'Submit Application' }}
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>

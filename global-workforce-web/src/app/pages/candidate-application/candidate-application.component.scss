@@ -1,0 +1,85 @@
+.application-section {
+    background: #f8f9fb;
+    min-height: 100vh;
+}
+
+.application-card {
+    max-width: 850px;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+}
+
+.application-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.application-card p {
+    font-size: .95rem;
+    max-width: 650px;
+    margin: auto;
+}
+
+label {
+    font-size: .88rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px 14px;
+    border: 1px solid #ced4da;
+    font-size: .95rem;
+    transition: .2s;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 .15rem rgba(13,110,253,.12);
+}
+
+.btn-primary {
+    border-radius: 8px;
+    padding: 10px 26px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width:768px){
+
+    .application-card{
+        padding:24px;
+    }
+
+    .btn-primary{
+        width:100%;
+    }
+
+}
+/* Placeholder styling */
+.form-control::placeholder {
+    color: #adb5bd;
+    opacity: 1; /* Required for Firefox */
+}
+
+/* Firefox */
+.form-control::-moz-placeholder {
+    color: #adb5bd;
+    opacity: 1;
+}
+
+/* Edge/Safari */
+.form-control::-webkit-input-placeholder {
+    color: #adb5bd;
+}
